@@ -1,0 +1,31 @@
+---
+title: "run_a_game"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{run_a_game}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Running a default game with a player that guesses randomly
+
+```{r setup}
+library(MineSweeper)
+```
+
+
+```{r play}
+b = Board$new()
+p = Player$new()
+g = Game$new(b, p)
+g$play()
+
+g
+```
